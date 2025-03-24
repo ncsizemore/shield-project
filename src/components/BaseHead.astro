@@ -18,14 +18,19 @@ const socialImageURL = new URL(ogImage ? ogImage : "/social-card.png", Astro.url
 <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 <title>{siteTitle}</title>
 
+{/* Add Google Fonts */}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+
 {/* Icons */}
 <link href="/icon.svg" rel="icon" type="image/svg+xml" />
 {
 	import.meta.env.PROD && (
 		<>
 			{/* Favicon & Apple Icon */}
-			<link rel="icon" href="/favicon-32x32.png" type="image/png" />
-			<link href="/icons/apple-touch-icon.png" rel="apple-touch-icon" />
+			<link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml" />
+			<link rel="icon" href="/icon.svg" sizes="any" />
 			{/* Manifest */}
 			<link href="/manifest.webmanifest" rel="manifest" />
 		</>

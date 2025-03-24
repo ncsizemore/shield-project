@@ -1,0 +1,315 @@
+---
+import PageLayout from "@/layouts/Base.astro";
+import { Icon } from "astro-icon/components";
+
+const meta = {
+	title: "Research",
+	description: "SHIELD Project research methodology and approach",
+};
+---
+
+<PageLayout meta={meta}>
+	<div class="space-y-10">
+		<section>
+			<h1 class="title text-3xl md:text-4xl mb-6">Research Methodology</h1>
+			<div class="card p-6 border-l-4 border-blue-500 slide-in dark:bg-gray-900 dark:border-gray-800">
+				<p class="text-lg dark:text-gray-300">
+					The SHIELD project develops a comprehensive modeling framework to understand and address the rising syphilis 
+					epidemic in the United States, particularly its intersection with HIV.
+				</p>
+			</div>
+		</section>
+
+		<section class="card p-8 bg-gradient-to-br from-blue-50 to-white dark:bg-gradient-to-br dark:from-gray-900 dark:to-gray-900 dark:border-gray-800">
+			<h2 class="text-2xl font-semibold text-accent mb-4 dark:text-blue-300">SHIELD Model Structure</h2>
+			
+			<div class="flex flex-col md:flex-row gap-8">
+				<div class="md:w-1/2">
+					<p class="mb-4 dark:text-gray-300">
+						Our model defines population compartments along three main axes:
+					</p>
+					<ul class="space-y-3">
+						<li class="flex items-start gap-2">
+							<div class="text-blue-500 dark:text-blue-400 mt-1 shrink-0">
+								<Icon name="mdi:virus" class="w-5 h-5" />
+							</div>
+							<div class="dark:text-gray-300">
+								<strong>Syphilis natural history</strong> - tracking infection stages and progression
+							</div>
+						</li>
+						<li class="flex items-start gap-2">
+							<div class="text-blue-500 dark:text-blue-400 mt-1 shrink-0">
+								<Icon name="mdi:hospital-box" class="w-5 h-5" />
+							</div>
+							<div class="dark:text-gray-300">
+								<strong>Syphilis care cascade</strong> - modeling screening, diagnosis, and treatment
+							</div>
+						</li>
+						<li class="flex items-start gap-2">
+							<div class="text-blue-500 dark:text-blue-400 mt-1 shrink-0">
+								<Icon name="mdi:pill" class="w-5 h-5" />
+							</div>
+							<div class="dark:text-gray-300">
+								<strong>HIV care continuum</strong> - incorporating HIV status and care engagement
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="md:w-1/2">
+					<p class="mb-4 dark:text-gray-300">
+						These compartments are further stratified by:
+					</p>
+					<ul class="space-y-3">
+						<li class="flex items-start gap-2">
+							<div class="text-green-500 dark:text-green-400 mt-1 shrink-0">
+								<Icon name="mdi:account-group" class="w-5 h-5" />
+							</div>
+							<div class="dark:text-gray-300">
+								<strong>Age</strong> - focusing on key age groups with differential risk
+							</div>
+						</li>
+						<li class="flex items-start gap-2">
+							<div class="text-green-500 dark:text-green-400 mt-1 shrink-0">
+								<Icon name="mdi:account-multiple" class="w-5 h-5" />
+							</div>
+							<div class="dark:text-gray-300">
+								<strong>Race/ethnicity</strong> - to capture disparities in disease burden
+							</div>
+						</li>
+						<li class="flex items-start gap-2">
+							<div class="text-green-500 dark:text-green-400 mt-1 shrink-0">
+								<Icon name="mdi:account-alert" class="w-5 h-5" />
+							</div>
+							<div class="dark:text-gray-300">
+								<strong>STI risk</strong> - including MSM, heterosexual activity, injection drug use, and pregnancy status
+							</div>
+						</li>
+						<li class="flex items-start gap-2">
+							<div class="text-green-500 dark:text-green-400 mt-1 shrink-0">
+								<Icon name="mdi:home-city" class="w-5 h-5" />
+							</div>
+							<div class="dark:text-gray-300">
+								<strong>Social determinants of health</strong> - incorporating factors like insurance coverage and housing instability
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section class="card p-6 dark:bg-gray-900 dark:border-gray-800">
+			<div class="flex items-start gap-4">
+				<div class="text-blue-500 dark:text-blue-400 mt-1">
+					<Icon name="mdi:chart-bubble" class="w-8 h-8" />
+				</div>
+				<div>
+					<h2 class="text-xl font-semibold text-accent mb-3 dark:text-blue-300">Calibration Approach</h2>
+					<p class="mb-4 dark:text-gray-300">
+						We use a Bayesian calibration approach that:
+					</p>
+					<div class="grid sm:grid-cols-2 gap-4">
+						<div class="p-4 bg-blue-50 dark:bg-blue-900 rounded-lg">
+							<p class="dark:text-gray-200">Combines prior knowledge about factors underpinning US syphilis epidemics with local-level data</p>
+						</div>
+						<div class="p-4 bg-blue-50 dark:bg-blue-900 rounded-lg">
+							<p class="dark:text-gray-200">Quantifies uncertainty in parameter estimates</p>
+						</div>
+						<div class="p-4 bg-blue-50 dark:bg-blue-900 rounded-lg">
+							<p class="dark:text-gray-200">Generates a range of possible epidemic projections</p>
+						</div>
+						<div class="p-4 bg-blue-50 dark:bg-blue-900 rounded-lg">
+							<p class="dark:text-gray-200">Yields estimates that are robust to model assumptions and inherent unknowns in surveillance</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h2 class="section-heading dark:text-blue-300">Research Aims</h2>
+			
+			<div class="mt-10 mb-12 p-8 bg-blue-600 dark:bg-blue-800 text-white rounded-lg relative">
+				<div class="absolute -top-5 left-8 bg-blue-700 dark:bg-blue-900 text-white rounded-full w-10 h-10 flex items-center justify-center text-xl font-bold">1</div>
+				<h3 class="text-2xl font-bold mb-4">Assessing Existing Control Strategies</h3>
+				<p class="mb-4">
+					We evaluate combinations of improvements in syphilis testing, partner tracing, and treatment initiation 
+					among subgroups of people with HIV (PWH) and other priority subgroups (MSM and pregnant women).
+				</p>
+				<p class="mb-3 font-medium">
+					Key activities include:
+				</p>
+				<ul class="space-y-2">
+					<li class="flex items-start gap-2">
+						<div class="text-blue-300 mt-1 shrink-0">
+							<Icon name="mdi:check-circle" class="w-5 h-5" />
+						</div>
+						<div>
+							Projecting the interventions' impact on future trajectory and health disparities
+						</div>
+					</li>
+					<li class="flex items-start gap-2">
+						<div class="text-blue-300 mt-1 shrink-0">
+							<Icon name="mdi:check-circle" class="w-5 h-5" />
+						</div>
+						<div>
+							Estimating the interventions' cost-effectiveness
+						</div>
+					</li>
+					<li class="flex items-start gap-2">
+						<div class="text-blue-300 mt-1 shrink-0">
+							<Icon name="mdi:check-circle" class="w-5 h-5" />
+						</div>
+						<div>
+							Identifying the most impactful and cost-effective intervention combinations for each city
+						</div>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="mb-12 p-8 bg-purple-600 dark:bg-purple-800 text-white rounded-lg relative">
+				<div class="absolute -top-5 left-8 bg-purple-700 dark:bg-purple-900 text-white rounded-full w-10 h-10 flex items-center justify-center text-xl font-bold">2</div>
+				<h3 class="text-2xl font-bold mb-4">Projecting the Impact of Emerging Strategies</h3>
+				<p class="mb-4">
+					We simulate novel prevention and diagnostic approaches including:
+				</p>
+				<div class="grid sm:grid-cols-2 gap-4 mb-4">
+					<div class="p-4 bg-purple-500 dark:bg-purple-700 bg-opacity-30 dark:bg-opacity-70 rounded-lg">
+						<div class="flex items-start gap-2">
+							<div class="text-white mt-1 shrink-0">
+								<Icon name="mdi:pill" class="w-6 h-6" />
+							</div>
+							<div>
+								<strong>Doxycycline post-exposure prophylaxis (doxy-PEP)</strong> - at various levels of uptake, persistence, and effectiveness
+							</div>
+						</div>
+					</div>
+					<div class="p-4 bg-purple-500 dark:bg-purple-700 bg-opacity-30 dark:bg-opacity-70 rounded-lg">
+						<div class="flex items-start gap-2">
+							<div class="text-white mt-1 shrink-0">
+								<Icon name="mdi:test-tube" class="w-6 h-6" />
+							</div>
+							<div>
+								<strong>Novel testing strategies</strong> - including at-home sample collection, point-of-care testing, and nucleic acid amplification tests
+							</div>
+						</div>
+					</div>
+				</div>
+				<p>
+					We identify scenarios that are most impactful while remaining cost-effective, and explore combinations with existing approaches that can reduce racial/ethnic disparities in syphilis incidence.
+				</p>
+			</div>
+			
+			<div class="mb-8 p-8 bg-green-600 dark:bg-green-800 text-white rounded-lg relative">
+				<div class="absolute -top-5 left-8 bg-green-700 dark:bg-green-900 text-white rounded-full w-10 h-10 flex items-center justify-center text-xl font-bold">3</div>
+				<h3 class="text-2xl font-bold mb-4">Developing a Decision Support Toolkit</h3>
+				<p class="mb-4">
+					We are developing an online toolkit to help local decision-makers:
+				</p>
+				<div class="grid sm:grid-cols-3 gap-4">
+					<div class="p-4 bg-green-500 dark:bg-green-700 bg-opacity-30 dark:bg-opacity-70 rounded-lg text-center">
+						<div class="text-white mb-2">
+							<Icon name="mdi:chart-areaspline" class="w-10 h-10 mx-auto" />
+						</div>
+						<p>Design syphilis interventions based on local epidemiology</p>
+					</div>
+					<div class="p-4 bg-green-500 dark:bg-green-700 bg-opacity-30 dark:bg-opacity-70 rounded-lg text-center">
+						<div class="text-white mb-2">
+							<Icon name="mdi:currency-usd" class="w-10 h-10 mx-auto" />
+						</div>
+						<p>Consider budgetary constraints in planning</p>
+					</div>
+					<div class="p-4 bg-green-500 dark:bg-green-700 bg-opacity-30 dark:bg-opacity-70 rounded-lg text-center">
+						<div class="text-white mb-2">
+							<Icon name="mdi:chart-box" class="w-10 h-10 mx-auto" />
+						</div>
+						<p>Visualize projections of impact, cost, and effects on racial disparities</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="grid gap-8 md:grid-cols-2">
+			<div class="card p-6 dark:bg-gray-900 dark:border-gray-800">
+				<h2 class="text-xl font-semibold text-accent mb-4 dark:text-blue-300">Health Department Partnerships</h2>
+				<p class="mb-4 dark:text-gray-300">
+					The SHIELD project partners with health departments in:
+				</p>
+				<ul class="space-y-3">
+					<li class="flex items-start gap-2 p-3 bg-blue-50 dark:bg-blue-900 rounded-lg">
+						<div class="text-blue-500 dark:text-blue-400 mt-1 shrink-0">
+							<Icon name="mdi:city" class="w-5 h-5" />
+						</div>
+						<div class="dark:text-gray-300">
+							<strong>New York City</strong>
+						</div>
+					</li>
+					<li class="flex items-start gap-2 p-3 bg-blue-50 dark:bg-blue-900 rounded-lg">
+						<div class="text-blue-500 dark:text-blue-400 mt-1 shrink-0">
+							<Icon name="mdi:city" class="w-5 h-5" />
+						</div>
+						<div class="dark:text-gray-300">
+							<strong>Baltimore City</strong>
+						</div>
+					</li>
+					<li class="flex items-start gap-2 p-3 bg-blue-50 dark:bg-blue-900 rounded-lg">
+						<div class="text-blue-500 dark:text-blue-400 mt-1 shrink-0">
+							<Icon name="mdi:office-building" class="w-5 h-5" />
+						</div>
+						<div class="dark:text-gray-300">
+							<strong>New York State</strong>
+						</div>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="card p-6 dark:bg-gray-900 dark:border-gray-800">
+				<h2 class="text-xl font-semibold text-accent mb-4 dark:text-blue-300">Economic Modeling</h2>
+				<p class="mb-4 dark:text-gray-300">
+					Our economic analysis assesses the affordability and cost-effectiveness of potential interventions for syphilis control:
+				</p>
+				<ul class="space-y-2">
+					<li class="flex items-start gap-2">
+						<div class="text-green-500 dark:text-green-400 mt-1 shrink-0">
+							<Icon name="mdi:currency-usd" class="w-5 h-5" />
+						</div>
+						<div class="dark:text-gray-300">
+							Estimating costs from both healthcare and societal perspectives
+						</div>
+					</li>
+					<li class="flex items-start gap-2">
+						<div class="text-green-500 dark:text-green-400 mt-1 shrink-0">
+							<Icon name="mdi:calculator-variant" class="w-5 h-5" />
+						</div>
+						<div class="dark:text-gray-300">
+							Calculating total budget impact based on population coverage
+						</div>
+					</li>
+					<li class="flex items-start gap-2">
+						<div class="text-green-500 dark:text-green-400 mt-1 shrink-0">
+							<Icon name="mdi:calendar-check" class="w-5 h-5" />
+						</div>
+						<div class="dark:text-gray-300">
+							Determining cost per quality-adjusted life year (QALY) gained
+						</div>
+					</li>
+					<li class="flex items-start gap-2">
+						<div class="text-green-500 dark:text-green-400 mt-1 shrink-0">
+							<Icon name="mdi:check-decagram" class="w-5 h-5" />
+						</div>
+						<div class="dark:text-gray-300">
+							Evaluating cost per syphilis infection averted and cost per congenital syphilis case averted
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="card p-5 mt-8 bg-gradient-to-r from-blue-600 to-blue-700 dark:from-blue-800 dark:to-blue-900 text-white">
+			<div class="p-5 border border-blue-300 dark:border-blue-700 border-opacity-30 rounded-lg">
+				<p class="text-xl italic text-center">
+					"Given funding constraints in the public health landscape, effective allocation of scarce public health resources is critical to controlling the syphilis epidemic."
+				</p>
+			</div>
+		</section>
+	</div>
+</PageLayout>

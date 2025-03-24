@@ -1,0 +1,94 @@
+---
+import PageLayout from "@/layouts/Base.astro";
+import { Icon } from "astro-icon/components";
+
+const meta = {
+	title: "Contact",
+	description: "Contact the SHIELD project team",
+};
+---
+
+<PageLayout meta={meta}>
+	<div class="space-y-10">
+		<section>
+			<h1 class="title text-3xl md:text-4xl mb-6">Contact Us</h1>
+			<div class="card p-6 border-l-4 border-blue-500 slide-in dark:bg-gray-900 dark:border-gray-800">
+				<p class="text-lg dark:text-gray-300">
+					We welcome inquiries about the SHIELD project, potential collaborations, or questions about our research.
+				</p>
+			</div>
+		</section>
+
+		<!-- Consolidated Contact Card -->
+		<section>
+			<div class="card hover:shadow-lg transition-shadow duration-300 dark:bg-gray-900 dark:border-gray-800">
+				<div class="bg-gradient-to-r from-blue-600 to-blue-700 dark:from-blue-800 dark:to-blue-900 p-4 text-white">
+					<h2 class="text-xl font-bold flex items-center gap-2">
+						<Icon name="mdi:contacts" class="w-6 h-6" />
+						<span>Contact Information</span>
+					</h2>
+				</div>
+				<div class="p-6">
+					<div class="grid md:grid-cols-2 gap-6">
+						<!-- Project Address -->
+						<div>
+							<h3 class="font-semibold text-lg mb-3 flex items-center gap-2 dark:text-blue-300">
+							<Icon name="mdi:map-marker-outline" class="w-5 h-5 text-blue-500 dark:text-blue-400" />
+							<span>Project Address</span>
+							</h3>
+							<div class="p-4 bg-blue-50 dark:bg-blue-900 rounded-lg">
+							<address class="not-italic dark:text-gray-300">
+									SHIELD Project<br />
+									Johns Hopkins Bloomberg School of Public Health<br />
+									Department of Epidemiology<br />
+									615 N. Wolfe Street<br />
+									Baltimore, MD 21205
+								</address>
+							</div>
+						</div>
+						
+						<!-- Principal Investigator Contact -->
+						<div>
+							<h3 class="font-semibold text-lg mb-3 flex items-center gap-2 dark:text-blue-300">
+							<Icon name="mdi:account" class="w-5 h-5 text-blue-500 dark:text-blue-400" />
+							<span>Principal Investigator</span>
+							</h3>
+							<div class="p-4 bg-blue-50 dark:bg-blue-900 rounded-lg">
+							<p class="font-medium mb-1 dark:text-gray-200">Dr. Parastu Kasaie</p>
+							<p class="mb-3 text-sm text-gray-600 dark:text-gray-400">
+							Associate Scientist<br />
+							Department of Epidemiology<br />
+							Johns Hopkins Bloomberg School of Public Health
+							</p>
+							<p><span class="font-medium dark:text-gray-200">Email:</span> <a href="mailto:pkasaie1@jhu.edu" class="text-blue-600 dark:text-blue-400 hover:underline">pkasaie1@jhu.edu</a></p>
+							</div>
+							<p class="mt-2 text-sm text-gray-500 dark:text-gray-400">
+							For health departments interested in the SHIELD model or potential collaborations, please contact Dr. Kasaie directly.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Online Toolkit Section -->
+		<section class="card p-6 bg-blue-50 border border-blue-200 dark:bg-gray-900 dark:border-gray-800">
+			<div class="flex items-start gap-4">
+				<div class="text-blue-600 dark:text-blue-400 mt-1">
+					<Icon name="mdi:tools" class="w-8 h-8" />
+				</div>
+				<div>
+					<h2 class="text-xl font-semibold mb-2 dark:text-blue-300">Online Toolkit (Coming Soon)</h2>
+					<p class="mb-4 dark:text-gray-300">
+						We are developing a decision support toolkit to help health departments design and evaluate
+						syphilis intervention strategies based on local epidemiology and available resources.
+					</p>
+					<p class="text-sm text-gray-600 dark:text-gray-400">
+						For more information or to express interest in the toolkit, please contact us at 
+						<a href="mailto:pkasaie1@jhu.edu" class="text-blue-600 dark:text-blue-400 hover:underline">pkasaie1@jhu.edu</a>.
+					</p>
+				</div>
+			</div>
+		</section>
+	</div>
+</PageLayout>

@@ -1,0 +1,182 @@
+---
+import PageLayout from "@/layouts/Base.astro";
+import { Icon } from "astro-icon/components";
+
+const meta = {
+	title: "Team",
+	description: "SHIELD Project research team and collaborators",
+};
+
+// Team data from provided document
+const researchers = [
+	{
+		name: "Parastu Kasaie",
+		title: "Principal Investigator",
+		affiliation: "Johns Hopkins Bloomberg School of Public Health",
+		department: "Department of Epidemiology",
+		bio: "Dr. Parastu Kasaie is an Associate Scientist in Epidemiology at the Johns Hopkins Bloomberg School of Public Health (JHSPH). With a multidisciplinary background in computer science, epidemiology, and computational disease modeling, she applies her expertise to study the epidemiology of HIV and other sexually transmitted infections (STIs) in both the U.S. and globally. Her research focuses on addressing complex epidemiological challenges, particularly those involving human behavior and the interplay between communicable and non-communicable diseases, using advanced computational simulation techniques. Her work is integral to designing more effective HIV prevention and care strategies, both locally and nationally. Dr. Kasaie currently serves as Principal Investigator (PI) of the Syphilis and HIV Integrated Epidemiologic and Economic Local-level Dynamics (SHIELD) models [NIH/NIAID: R01AI179776], a suite of models analyzing the syphilis and HIV epidemics in high-burden U.S. cities to inform targeted strategies for ending the HIV epidemic.",
+		icon: "mdi:account-tie"
+	},
+	{
+		name: "Todd Fojo",
+		title: "Assistant Professor",
+		affiliation: "Johns Hopkins School of Medicine",
+		department: "Department of Medicine",
+		bio: "Dr. Todd Fojo is an Assistant Professor of Medicine in the Department of Medicine at the Johns Hopkins School of Medicine. He earned a B.S. in Computer Science from Stanford University and an M.D. from Washington University School of Medicine in St. Louis. Dr. Fojo completed his residency in internal medicine at Barnes-Jewish Hospital, followed by a General Internal Medicine Fellowship and a Master of Health Science (MHS) in Biostatistics at the Johns Hopkins School of Public Health. Dr. Fojo's research is centered on developing dynamic transmission models for HIV, with a particular focus on innovative calibration techniques for high-dimensional parameter spaces. He is a principal investigator on the Johns Hopkins Epidemiological and Economic Model (JHEEM), which forecasts future HIV incidence across 15 key subgroups under various scenarios aimed at achieving the goals of Ending the HIV Epidemic (EHE). Supported by NIH grant R01MD018539 (NIMDH), Dr. Fojo's work also contributes to the JHEEM2 framework, which serves as the summation engine for the SHIELD simulation model.",
+		icon: "mdi:account-tie"
+	},
+	{
+		name: "Melissa Schnure",
+		title: "Epidemiologist",
+		affiliation: "Johns Hopkins School of Medicine",
+		department: "",
+		bio: "Melissa is an epidemiologist at the Johns Hopkins School of Medicine. She holds a PhD and a Master of Science in Infectious Disease Epidemiology from Johns Hopkins Bloomberg School of Public Health. She joined the team as a student in 2019 working with Drs. Dowdy, Kasaie, and Fojo on a suite of dynamic HIV modeling tools. She currently supports the development and application of the JHEEM and SHIELD models.",
+		icon: "mdi:account-tie"
+	},
+	{
+		name: "Andrew Zalesak",
+		title: "Senior Programmer Analyst",
+		affiliation: "Johns Hopkins School of Medicine",
+		department: "",
+		bio: "Andrew Zalesak is a Senior Programmer Analyst at the Johns Hopkins School of Medicine. He earned a B.S. in Biochemistry and an M.S. in Environmental Science from the University of North Carolina at Chapel Hill before joining the JHEEM team in Spring of 2023. His main duties are as an R programmer for the JHEEM2 package and its associated web tool. Andrew has previously worked at the U.S. Environmental Protection Agency as a research fellow studying transportation sector. As a Programmer Analyst, Andrew plays a key role in the development and maintenance of the JHEEM2 simulation package and its associated web tool. He provides essential support in the ongoing enhancement and functionality of the tool, ensuring it meets the needs of the project and contributes to the success of the team's epidemiological modeling efforts.",
+		icon: "mdi:account-tie"
+	},
+	{
+		name: "Zoe Dansky",
+		title: "Epidemiologist",
+		affiliation: "Johns Hopkins School of Medicine",
+		department: "",
+		bio: "Zoe Dansky is an epidemiologist at the Johns Hopkins School of Medicine, where she joined the modeling team in 2023. In her role, she focuses on compiling and organizing the data that underpins various models. Zoe holds a Master's in Public Health from Tulane University and has a diverse public health background, having worked with local health departments on HIV/STI testing and outreach, as well as outbreak epidemiology for COVID-19 and Mpox. As the data manager for the JHEEM and SHIELD projects, Zoe oversees data acquisition, setup, and maintenance, ensuring smooth integration into the models. Her work plays a critical role in the success of these projects, supporting the development of data-driven insights for public health strategies.",
+		icon: "mdi:account-tie"
+	},
+	{
+		name: "David Dowdy",
+		title: "Co-Investigator",
+		affiliation: "Johns Hopkins Bloomberg School of Public Health",
+		department: "Department of Epidemiology",
+		bio: "Dr. Dowdy is an internist and Professor of Epidemiology at the JHBSPH and is an expert in infectious disease modeling and cost-effectiveness analysis. He is the Principal Investigator of NIAID-sponsored studies in South Africa and Uganda that include transmission models of HIV-associated tuberculosis, and the subcontract PI of a cooperative agreement with the CDC for modeling of HIV and TB and STIs in the US. He serves as a Co-Investigator on the JHEEM and SHIELD studies, providing support to model design and computer simulation methodology, formulating intervention scenarios, as well as costing and cost-effectiveness analysis.",
+		icon: "mdi:account-tie"
+	},
+	{
+		name: "Maunank Shah",
+		title: "Co-Investigator",
+		affiliation: "Johns Hopkins University",
+		department: "School of Medicine & School of Public Health",
+		bio: "Dr. Shah is a Professor in the Division of Infectious Diseases at the Johns Hopkins University School of Medicine and has a joint appointment at the Department of Epidemiology, JHBSPH. He has expertise conducting modeling and economic evaluations of HIV care-continuum interventions. He has previously led HIV modeling efforts under a CDC subcontract cooperative agreement and has developed the initial version of JHEEM mathematical model. He serves as a Co-Investigator of the SHIELD and JHEEM studies, providing detailed support to model design, formulation of intervention scenarios, as well as costing and cost-effectiveness analysis",
+		icon: "mdi:account-tie"
+	},
+	{
+		name: "Khalil Ghanem",
+		title: "Co-Investigator",
+		affiliation: "Johns Hopkins University School of Medicine",
+		department: "Division of Infectious Diseases",
+		bio: "Dr. Ghanem is a Professor in the Division of Infectious Diseases at Johns Hopkins University School of Medicine. He brings public health and content expertise regarding syphilis and STI. He was previously the Director of Clinical Services for STD, HIV, and TB at the Baltimore City Health Department, bringing local level knowledge of STD prevention strategies. He was a consultant for the 2010 and 2015 CDC STD Treatment Guidelines and authored the background papers for the syphilis sections. He was an external consultant for the syphilis section on the Guidelines for Prevention and Treatment of Opportunistic Infections in HIV-Infected Adults and Adolescents. He is currently acting as a member of the external working group for the development of the CDC's Laboratory Guidelines for Syphilis Serology. Dr. Ghanem serves as a Co-Investigator on the SHIELD study, providing support to ensure that the models reflect the epidemiology and biology of syphilis, and that the suggested interventions are both clinically and epidemiologically well-founded.",
+		icon: "mdi:account-tie"
+	},
+];
+
+const partners = [
+	{
+		organization: "New York City Department of Health and Mental Hygiene",
+		role: "Health Department Partner",
+		icon: "mdi:city"
+	},
+	{
+		organization: "Baltimore City Health Department",
+		role: "Health Department Partner",
+		icon: "mdi:city"
+	},
+	{
+		organization: "New York State Department of Health",
+		role: "Health Department Partner",
+		icon: "mdi:office-building"
+	},
+	{
+		organization: "National Network of STD Clinical Prevention Training Centers",
+		role: "Dissemination Partner",
+		icon: "mdi:school-outline"
+	},
+];
+---
+
+<PageLayout meta={meta}>
+	<div class="space-y-10">
+		<section>
+			<h1 class="title text-3xl md:text-4xl mb-6">Our Team</h1>
+			<div class="card p-6 border-l-4 border-blue-500 slide-in dark:bg-gray-900 dark:border-gray-800">
+				<p class="text-lg dark:text-gray-300">
+					The SHIELD project brings together experts in infectious disease epidemiology, mathematical modeling, 
+					clinical research, and public health policy to address the rising syphilis epidemic in the United States.
+				</p>
+			</div>
+		</section>
+
+		<section>
+			<h2 class="section-heading mb-8 dark:text-blue-300">Research Team</h2>
+			
+			<div class="grid gap-8 md:grid-cols-2">
+				{researchers.map((researcher) => (
+					<div class="card hover:shadow-lg transition-shadow duration-300 overflow-hidden dark:bg-gray-900 dark:border-gray-800">
+						<div class="bg-gradient-to-r from-blue-600 to-blue-700 dark:from-blue-800 dark:to-blue-900 p-4 text-white">
+							<div class="flex items-center gap-3">
+								<div class="bg-white bg-opacity-20 rounded-full p-2">
+									<Icon name={researcher.icon} class="w-6 h-6" />
+								</div>
+								<div>
+									<h3 class="font-bold text-lg">{researcher.name}</h3>
+									<p class="text-blue-100 text-sm">{researcher.title}</p>
+								</div>
+							</div>
+						</div>
+						<div class="p-5">
+							{researcher.affiliation && <p class="text-sm mb-1 font-medium dark:text-gray-300">{researcher.affiliation}</p>}
+							{researcher.department && <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">{researcher.department}</p>}
+							<div class="border-t border-gray-100 dark:border-gray-800 pt-3">
+								<p class="text-sm dark:text-gray-400">{researcher.bio}</p>
+							</div>
+						</div>
+					</div>
+				))}
+			</div>
+
+			<div class="mt-8 text-center text-sm text-gray-500 dark:text-gray-400">
+				<p>Note: Team photos will be added in a future update.</p>
+			</div>
+		</section>
+
+		<section>
+			<h2 class="section-heading mb-8 dark:text-blue-300">Partner Organizations</h2>
+			
+			<div class="grid gap-6 md:grid-cols-2">
+				{partners.map((partner) => (
+					<div class="card p-5 flex items-start gap-4 hover:shadow-lg transition-shadow duration-300 dark:bg-gray-900 dark:border-gray-800">
+						<div class="bg-blue-100 dark:bg-blue-900 rounded-full p-3 text-blue-600 dark:text-blue-400">
+							<Icon name={partner.icon} class="w-8 h-8" />
+						</div>
+						<div>
+							<h3 class="font-bold text-lg dark:text-white">{partner.organization}</h3>
+							<p class="text-sm text-gray-600 dark:text-gray-400">{partner.role}</p>
+						</div>
+					</div>
+				))}
+			</div>
+		</section>
+
+		<section class="mt-10">
+			<div class="card p-6 border border-blue-200 bg-blue-50 dark:bg-gray-900 dark:border-gray-800 dark:bg-opacity-100">
+				<div class="flex items-start gap-4">
+					<div class="text-blue-500 dark:text-blue-400 mt-1">
+						<Icon name="mdi:information" class="w-8 h-8" />
+					</div>
+					<div>
+						<h3 class="font-bold mb-2 dark:text-blue-300">NIH/NIAID Research Funding</h3>
+						<p class="dark:text-gray-300">
+							This research is supported by a 5-year grant from the National Institute of Allergy and 
+							Infectious Diseases (NIAID) [R01AI179776 PI: Kasaie].
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</PageLayout>

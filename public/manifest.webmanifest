@@ -1,0 +1,16 @@
+{
+  "name": "SHIELD Project",
+  "short_name": "SHIELD",
+  "description": "Syphilis and HIV Integrated Epidemiologic and Economic Local-level Dynamics - A research project developing models to address the rising syphilis epidemic in the US",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "theme_color": "#3B82F6",
+  "background_color": "#FFFFFF",
+  "display": "standalone"
+}

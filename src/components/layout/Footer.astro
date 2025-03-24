@@ -1,27 +1,99 @@
 ---
+import { Icon } from "astro-icon/components";
 import { menuLinks, siteConfig } from "@/site.config";
 
 const year = new Date().getFullYear();
 ---
 
 <footer
-	class="mt-auto flex w-full flex-col items-center justify-center gap-y-2 pt-20 pb-4 text-center align-top font-semibold text-gray-600 sm:flex-row sm:justify-between sm:text-xs dark:text-gray-400"
+	class="mt-auto w-full py-10 bg-gray-50 border-t border-gray-100 dark:bg-gray-900 dark:border-gray-800"
 >
-	<div class="me-0 sm:me-4">
-		&copy; {siteConfig.author}
-		{year}.<span class="inline-block">&nbsp;🚀&nbsp;Astro Cactus</span>
+	<div class="max-w-5xl mx-auto px-6">
+		<div class="flex flex-col md:flex-row justify-between gap-8">
+			<div class="md:w-1/3">
+				<div class="flex items-center gap-3 mb-4">
+					<div class="flex-shrink-0 flex items-center">
+						<div class="w-10 h-10 rounded-lg shadow-md ring-2 ring-opacity-30 bg-white dark:bg-gray-800 p-1.5 ring-blue-500 dark:ring-blue-400 text-blue-600 dark:text-blue-400">
+						<svg
+							aria-hidden="true"
+							fill="none"
+							focusable="false"
+							viewBox="0 0 200 200"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M100 10 L180 40 L180 90 C180 130 150 170 100 190 C50 170 20 130 20 90 L20 40 L100 10Z"
+								fill="currentColor" stroke="#fff" stroke-width="5" class="dark:stroke-gray-700"></path>
+							<path
+								d="M100 30 L160 55 L160 90 C160 120 135 150 100 165 C65 150 40 120 40 90 L40 55 L100 30Z"
+								fill="#fff" stroke="none" class="dark:fill-gray-700"></path>
+							<path
+								d="M80 80 L90 70 L120 100 L90 130 L80 120 L100 100 L80 80Z"
+								fill="currentColor" stroke="none"></path>
+						</svg>
+						</div>
+					</div>
+					<div class="flex-grow">
+						<span class="font-bold text-blue-800 dark:text-blue-300">SHIELD <span class="text-blue-600 dark:text-blue-400">Project</span></span>
+						<p class="text-xs text-gray-500 dark:text-gray-400">Syphilis and HIV Integrated Epidemiologic and Economic Local-level Dynamics</p>
+					</div>
+				</div>
+				<p class="text-sm text-gray-600 dark:text-gray-300 mb-4">
+					Developing evidence-based modeling to address the rising syphilis epidemic in the US and its intersection with HIV.
+				</p>
+				<p class="text-xs text-gray-500 dark:text-gray-500">
+					&copy; {year} {siteConfig.author}
+				</p>
+			</div>
+			
+			<div>
+				<h3 class="font-semibold text-gray-700 dark:text-gray-200 mb-3">Navigation</h3>
+				<nav
+					aria-labelledby="footer_links"
+					class="flex flex-col gap-2"
+				>
+					<p id="footer_links" class="sr-only">Footer Links</p>
+					{
+						menuLinks.map((link) => (
+							<a class="text-sm text-gray-600 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-300 transition-colors" href={link.path}>
+								{link.title}
+							</a>
+						))
+					}
+				</nav>
+			</div>
+			
+			<div>
+				<h3 class="font-semibold text-gray-700 dark:text-gray-200 mb-3">Partner Organizations</h3>
+				<ul class="text-sm text-gray-600 dark:text-gray-400 space-y-2">
+					<li>New York City Health Department</li>
+					<li>Baltimore City Health Department</li>
+					<li>New York State Health Department</li>
+					<li>Johns Hopkins University</li>
+				</ul>
+			</div>
+			
+			<div>
+				<h3 class="font-semibold text-gray-700 dark:text-gray-200 mb-3">Contact</h3>
+				<div class="text-sm text-gray-600 dark:text-gray-400 space-y-2">
+					<p class="flex items-center gap-2">
+						<Icon name="mdi:email-outline" class="w-4 h-4 text-blue-600 dark:text-blue-300" />
+						<a href="mailto:shield-project@jhu.edu" class="hover:text-blue-700 dark:hover:text-blue-300 transition-colors">shield-project@jhu.edu</a>
+					</p>
+					<p class="flex items-center gap-2">
+						<Icon name="mdi:map-marker-outline" class="w-4 h-4 text-blue-600 dark:text-blue-300" />
+						<span>Johns Hopkins University</span>
+					</p>
+					<p class="flex items-center gap-2">
+						<Icon name="mdi:web" class="w-4 h-4 text-blue-600 dark:text-blue-300" />
+						<a href="https://shield-project.github.io" class="hover:text-blue-700 dark:hover:text-blue-300 transition-colors">shield-project.github.io</a>
+					</p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="mt-8 pt-4 border-t border-gray-200 dark:border-gray-800 text-center text-xs text-gray-500 dark:text-gray-500">
+			<p>This website is under development. Content will be updated as the project progresses.</p>
+		</div>
 	</div>
-	<nav
-		aria-labelledby="footer_links"
-		class="flex gap-x-2 sm:gap-x-0 sm:divide-x sm:divide-gray-500"
-	>
-		<p id="footer_links" class="sr-only">More on this site</p>
-		{
-			menuLinks.map((link) => (
-				<a class="hover:text-global-text px-4 py-2 hover:underline sm:py-0" href={link.path}>
-					{link.title}
-				</a>
-			))
-		}
-	</nav>
 </footer>
