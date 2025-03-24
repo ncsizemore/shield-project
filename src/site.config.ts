@@ -22,7 +22,7 @@ export const siteConfig: SiteConfig = {
 	// Used to construct the meta title property found in src/components/BaseHead.astro L:11, and webmanifest name found in astro.config.ts L:42
 	title: "SHIELD Project",
 	// ! Please remember to replace the following site property with your own domain, used in astro.config.ts
-	url: "https://shield-project.github.io/",
+	url: "https://ncsizemore.github.io/shield-project/",
 };
 
 // Used to generate links in both the Header & Footer.
