@@ -11,75 +11,89 @@ const meta = {
 <PageLayout meta={meta}>
 	<div class="space-y-10">
 		<section class="mb-10">
-			<h1 class="title text-3xl md:text-4xl mb-6">About the SHIELD Project</h1>
-			<div class="card p-6 border-l-4 border-blue-500 slide-in dark:bg-gray-900 dark:border-gray-800">
+			<h1 class="title mb-6 text-3xl md:text-4xl">About the SHIELD Project</h1>
+			<div
+				class="card slide-in border-l-4 border-blue-500 p-6 dark:border-gray-800 dark:bg-gray-900"
+			>
 				<p class="text-lg dark:text-gray-300">
-					The Syphilis and HIV Integrated Epidemiologic and Economic Local-level Dynamics (SHIELD) project 
-					aims to bridge a critical gap in the current approaches to syphilis control in the US by developing 
-					a comprehensive, local-level model that addresses both syphilis and HIV epidemiology and their 
-					economic impact in the US.
+					The Syphilis and HIV Integrated Epidemiologic and Economic Local-level Dynamics (SHIELD)
+					project aims to bridge a critical gap in the current approaches to syphilis control in the
+					US by developing a comprehensive, local-level model that addresses both syphilis and HIV
+					epidemiology and their economic impact in the US.
 				</p>
 			</div>
 		</section>
 
 		<section class="grid gap-8 md:grid-cols-2">
-			<div class="card p-6 hover:shadow-lg dark:bg-gray-900 dark:border-gray-800">
+			<div class="card p-6 hover:shadow-lg dark:border-gray-800 dark:bg-gray-900">
 				<div class="flex items-start gap-4">
-					<div class="text-red-500 dark:text-red-400 mt-1">
-						<Icon name="mdi:alert-circle" class="w-8 h-8" />
+					<div class="mt-1 text-red-500 dark:text-red-400">
+						<Icon name="mdi:alert-circle" class="h-8 w-8" />
 					</div>
 					<div>
-						<h2 class="text-xl font-semibold text-accent mb-3 dark:text-blue-300">The Syphilis Crisis</h2>
+						<h2 class="text-accent mb-3 text-xl font-semibold dark:text-blue-300">
+							The Syphilis Crisis
+						</h2>
 						<p class="dark:text-gray-300">
-							Syphilis rates have quadrupled over the past decade, reaching their highest levels since the 1950s. 
-							One in every 1,300 US births in 2021 was complicated by congenital syphilis – a public health catastrophe. 
-							Increases in syphilis have been seen across the US: 45% of counties have seen a doubling in primary, 
-							secondary, and early latent syphilis over the past five years.
+							Syphilis rates have quadrupled over the past decade, reaching their highest levels
+							since the 1950s. One in every 1,300 US births in 2021 was complicated by congenital
+							syphilis – a public health catastrophe. Increases in syphilis have been seen across
+							the US: 45% of counties have seen a doubling in primary, secondary, and early latent
+							syphilis over the past five years.
 						</p>
 					</div>
 				</div>
 			</div>
 
-			<div class="card p-6 hover:shadow-lg dark:bg-gray-900 dark:border-gray-800">
+			<div class="card p-6 hover:shadow-lg dark:border-gray-800 dark:bg-gray-900">
 				<div class="flex items-start gap-4">
-					<div class="text-purple-500 dark:text-purple-400 mt-1">
-						<Icon name="mdi:connection" class="w-8 h-8" />
+					<div class="mt-1 text-purple-500 dark:text-purple-400">
+						<Icon name="mdi:connection" class="h-8 w-8" />
 					</div>
 					<div>
-						<h2 class="text-xl font-semibold text-accent mb-3 dark:text-blue-300">The Intersection of Syphilis and HIV</h2>
+						<h2 class="text-accent mb-3 text-xl font-semibold dark:text-blue-300">
+							The Intersection of Syphilis and HIV
+						</h2>
 						<p class="dark:text-gray-300">
-							The US syphilis epidemic is closely tied to the HIV epidemic. In recent years, 25-50% of US syphilis 
-							infections occur among people with HIV (PWH). PWH have a disproportionately high risk of acquiring 
-							syphilis, with reported incidence of 2% to 6% per year (up to 13% in young adults with HIV) – rates 
-							an order of magnitude higher than for non-HIV infected peers.
+							The US syphilis epidemic is closely tied to the HIV epidemic. In recent years, 25-50%
+							of US syphilis infections occur among people with HIV (PWH). PWH have a
+							disproportionately high risk of acquiring syphilis, with reported incidence of 2% to
+							6% per year (up to 13% in young adults with HIV) – rates an order of magnitude higher
+							than for non-HIV infected peers.
 						</p>
 						<p class="mt-2 dark:text-gray-300">
-							Furthermore, a diagnosis of syphilis often precedes HIV infection – up to 1 in 20 men who have sex 
-							with men (MSM) were diagnosed with HIV within a year of syphilis diagnosis – and syphilis may play 
-							a causal role in HIV acquisition.
+							Furthermore, a diagnosis of syphilis often precedes HIV infection – up to 1 in 20 men
+							who have sex with men (MSM) were diagnosed with HIV within a year of syphilis
+							diagnosis – and syphilis may play a causal role in HIV acquisition.
 						</p>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="card p-6 bg-gradient-to-r from-blue-50 to-white dark:bg-gradient-to-r dark:from-gray-900 dark:to-gray-900 dark:border-gray-800">
+		<section
+			class="card bg-gradient-to-r from-blue-50 to-white p-6 dark:border-gray-800 dark:bg-gradient-to-r dark:from-gray-900 dark:to-gray-900"
+		>
 			<div class="flex items-start gap-4">
-				<div class="text-blue-500 dark:text-blue-400 mt-1">
-					<Icon name="mdi:chart-pie" class="w-8 h-8" />
+				<div class="mt-1 text-blue-500 dark:text-blue-400">
+					<Icon name="mdi:chart-pie" class="h-8 w-8" />
 				</div>
 				<div>
-					<h2 class="text-xl font-semibold text-accent mb-3 dark:text-blue-300">Disparities and Patterns</h2>
+					<h2 class="text-accent mb-3 text-xl font-semibold dark:text-blue-300">
+						Disparities and Patterns
+					</h2>
 					<p class="dark:text-gray-300">
-						Syphilis and HIV both disproportionately affect racial, ethnic, and sexual minorities, and new 
-						infections are concentrated among the young. 34% of cases of primary and secondary syphilis were 
-						among men who have sex with men (MSM), and 57% were among those under 35 years old.
+						Syphilis and HIV both disproportionately affect racial, ethnic, and sexual minorities,
+						and new infections are concentrated among the young. 34% of cases of primary and
+						secondary syphilis were among men who have sex with men (MSM), and 57% were among those
+						under 35 years old.
 					</p>
-					<div class="mt-4 p-4 bg-blue-100 dark:bg-blue-900 rounded-lg">
+					<div class="mt-4 rounded-lg bg-blue-100 p-4 dark:bg-blue-900">
 						<p class="font-medium dark:text-gray-200">
-							Syphilis case rates among Hispanics were 2.4 times those of White Americans; Black Americans had a rate 
-							five times as high. Rates of congenital syphilis in Hispanic mothers were twice that of mothers of 
-							White race, and Black mothers experienced a rate four times that of White mothers.
+							Syphilis case rates among Hispanics were 2.4 times those of White Americans; Black
+							Americans had a rate five times as high. Rates of congenital syphilis in Hispanic
+							mothers were twice that of mothers of White race, and Black mothers experienced a rate
+							four times that of White mothers.
 						</p>
 					</div>
 				</div>
@@ -87,47 +101,54 @@ const meta = {
 		</section>
 
 		<section class="grid gap-8 md:grid-cols-2">
-			<div class="card p-6 hover:shadow-lg dark:bg-gray-900 dark:border-gray-800">
+			<div class="card p-6 hover:shadow-lg dark:border-gray-800 dark:bg-gray-900">
 				<div class="flex items-start gap-4">
-					<div class="text-amber-500 dark:text-amber-400 mt-1">
-						<Icon name="mdi:file-search" class="w-8 h-8" />
+					<div class="mt-1 text-amber-500 dark:text-amber-400">
+						<Icon name="mdi:file-search" class="h-8 w-8" />
 					</div>
 					<div>
-						<h2 class="text-xl font-semibold text-accent mb-3 dark:text-blue-300">Research Gap</h2>
+						<h2 class="text-accent mb-3 text-xl font-semibold dark:text-blue-300">Research Gap</h2>
 						<p class="dark:text-gray-300">
-							Despite extensive applications in HIV and other sexually transmitted infections, there is a marked 
-							lack of modeling studies focusing on US syphilis over the last decade. This gap hinders the effective 
-							formulation of evidence-based policy to halt the rise of the US syphilis epidemic.
+							Despite extensive applications in HIV and other sexually transmitted infections, there
+							is a marked lack of modeling studies focusing on US syphilis over the last decade.
+							This gap hinders the effective formulation of evidence-based policy to halt the rise
+							of the US syphilis epidemic.
 						</p>
 					</div>
 				</div>
 			</div>
 
-			<div class="card p-6 hover:shadow-lg dark:bg-gray-900 dark:border-gray-800">
+			<div class="card p-6 hover:shadow-lg dark:border-gray-800 dark:bg-gray-900">
 				<div class="flex items-start gap-4">
-					<div class="text-green-500 dark:text-green-400 mt-1">
-						<Icon name="mdi:strategy" class="w-8 h-8" />
+					<div class="mt-1 text-green-500 dark:text-green-400">
+						<Icon name="mdi:strategy" class="h-8 w-8" />
 					</div>
 					<div>
-						<h2 class="text-xl font-semibold text-accent mb-3 dark:text-blue-300">Our Approach</h2>
+						<h2 class="text-accent mb-3 text-xl font-semibold dark:text-blue-300">Our Approach</h2>
 						<p class="dark:text-gray-300">
-							The SHIELD model will characterize syphilis transmission, progression, HIV co-infection, and STI care 
-							engagement, while accounting for age, racial and ethnic disparities, risk profiles, and social 
-							determinants of health. We will calibrate our models to the 32 US cities which contain EHE priority 
-							jurisdictions – comprising 60% of syphilis cases as well as 60% of HIV diagnoses in 2021.
+							The SHIELD model will characterize syphilis transmission, progression, HIV
+							co-infection, and STI care engagement, while accounting for age, racial and ethnic
+							disparities, risk profiles, and social determinants of health. We will calibrate our
+							models to the 32 US cities which contain EHE priority jurisdictions – comprising 60%
+							of syphilis cases as well as 60% of HIV diagnoses in 2021.
 						</p>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="mt-8 p-8 bg-blue-600 dark:bg-blue-800 text-white rounded-lg text-center">
-			<h2 class="text-2xl font-bold mb-4">Our Vision</h2>
-			<p class="text-lg max-w-3xl mx-auto">
-				By developing rigorous mathematical models that integrate syphilis and HIV dynamics, we aim to provide public health officials with the evidence-based tools they need to effectively combat the syphilis epidemic and reduce health disparities.
+		<section class="mt-8 rounded-lg bg-blue-600 p-8 text-center text-white dark:bg-blue-800">
+			<h2 class="mb-4 text-2xl font-bold">Our Vision</h2>
+			<p class="mx-auto max-w-3xl text-lg">
+				By developing rigorous mathematical models that integrate syphilis and HIV dynamics, we aim
+				to provide public health officials with the evidence-based tools they need to effectively
+				combat the syphilis epidemic and reduce health disparities.
 			</p>
 			<div class="mt-6">
-				<a href="/research" class="inline-block px-6 py-3 bg-white text-blue-600 dark:bg-blue-200 dark:text-blue-800 font-medium rounded-lg hover:bg-blue-50 dark:hover:bg-blue-100">
+				<a
+					href={`${import.meta.env.BASE_URL}/research`}
+					class="inline-block rounded-lg bg-white px-6 py-3 font-medium text-blue-600 hover:bg-blue-50 dark:bg-blue-200 dark:text-blue-800 dark:hover:bg-blue-100"
+				>
 					Explore Our Research Methods
 				</a>
 			</div>
